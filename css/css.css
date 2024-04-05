@@ -22,7 +22,13 @@ body {
     overflow-x: hidden; /* Hide horizontal scrollbar */
 }
 
-
+@media not all and (min-resolution: 0.001dpcm) { 
+    @supports (-webkit-appearance:none) {
+        body {
+            font-family: 'Your-Safari-Font', sans-serif; /* Font for Safari */
+        }
+    }
+}
 
 .overlay {
     position: absolute; /* Set position to absolute */
