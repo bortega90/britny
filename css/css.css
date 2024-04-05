@@ -389,17 +389,58 @@ footer {
         width: calc(100% - 10vh); /* Make the container narrower for smaller screens */
     }
 }
-
-@media screen and (max-width: 768px) {
-    .devTag {
-        /* Your styles for smaller screens */
-        margin-bottom: 10px; /* Reduce margin between elements for smaller screens */
-        position: fixed; /* Set position to absolute for precise control */
-        top: 20px; /* Adjust top position for the name element */
+/* For smaller screens (iPhone) */
+@media screen and (max-width: 414px) {
+    body {
+        background-image: url('../images/background.png'); /* Background image for smaller screens */
+        background-size: cover; /* This will cover the entire viewport */
+        background-position: center left 10%;
+        background-repeat: no-repeat;
+        height:auto; /* Adjust height for smaller screens */
+        font-family: 'Montserrat', sans-serif;
+        overflow: hidden; /* Remove scrolling and overflow */
+    }
+    
+    .fname {
+        margin-bottom: 2vh; /* Use viewport units for margin */
+        position: absolute; /* Set position to absolute for precise control */
+        top: 10vh; /* Use viewport units for margin */
         left: 50%; /* Center the name element horizontally */
         transform: translateX(-50%); /* Center the name element horizontally */
+    } 
+
+    .image-container {
+        top: 10vh; /* Use viewport units for margin */
+        width: calc(100% - 10vh); /* Make the container narrower for smaller screens */
     }
 }
+
+/* For iPad */
+@media screen and (max-width: 1024px) {
+    body {
+        background-image: url('../images/background.png'); /* Background image for smaller screens */
+        background-size: cover; /* This will cover the entire viewport */
+        background-position: center left 10%;
+        background-repeat: no-repeat;
+        height:auto; /* Adjust height for smaller screens */
+        font-family: 'Montserrat', sans-serif;
+        overflow: hidden; /* Remove scrolling and overflow */
+    }
+    
+    .fname {
+        margin-bottom: 2vh; /* Use viewport units for margin */
+        position: absolute; /* Set position to absolute for precise control */
+        top: 10vh; /* Use viewport units for margin */
+        left: 50%; /* Center the name element horizontally */
+        transform: translateX(-50%); /* Center the name element horizontally */
+    } 
+
+    .image-container {
+        top: 10vh; /* Use viewport units for margin */
+        width: calc(100% - 10vh); /* Make the container narrower for smaller screens */
+    }
+}
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .hide-scrollbar::-webkit-scrollbar {
     display: none;
