@@ -216,11 +216,11 @@ footer {
     position: fixed;
     bottom: 0;
     right: 40%;
-    padding-top: 30%; /* Adjust the padding to decrease the space above the footer */
-    padding-bottom: -5%; /* Add padding at the bottom for space */
+    padding-top: 3px; /* Adjust the padding to decrease the space above the footer */
+    padding-bottom: 3px; /* Add padding at the bottom for space */
     color: #333; /* Optional: Text color for the footer */
-    font-family:'cute', sans-serif;
-
+    font-family: 'cute', sans-serif;
+    font-size: 8px; /* Adjust the font size to make the footer text smaller */
 }
 /* end footer */
 
