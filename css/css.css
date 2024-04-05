@@ -146,7 +146,9 @@ a:hover {
 .form-container {
     max-width: 49vw;
     padding: 1vw;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Add blur effect */
 }
 
 button {
@@ -302,13 +304,7 @@ footer {
 
 
 /* Ensure new content starts immediately after the background image */
-#content {
-    position: fixed;
-    top: 100%; /* Adjust as needed */
-    left: 0;
-    width: 80%;
-    background-color: #1c1a1a; /* Set background color for the new content */
-}
+
 
 /*NEW CONTENT SCROLL IMAGES*/
 #content {
@@ -316,11 +312,14 @@ footer {
     top: 100vh; /* Adjust as needed */
     left: 0;
     width: 100%; /* Change width to 100% to adapt to smaller screens */
-    max-height: 100vh ; /* Adjust max-height to fit smaller screens while leaving space for header/footer */
-    overflow: fixed; /* Add overflow to enable scrolling if the content overflows */
+    max-height: 100vh; /* Adjust max-height to fit smaller screens while leaving space for header/footer */
     background-color: #000000; /* Set background color for the new content */
     scrollbar-width: none; /* For Firefox */
     -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+#content:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add box-shadow on hover */
 }
 
 .content img {
