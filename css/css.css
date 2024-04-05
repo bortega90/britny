@@ -1,0 +1,417 @@
+@font-face {
+    font-family:'PP Pangaia';
+    src: url('c:///users/britn/appdata/local/microsoft/windows/fonts/pppangaia-bold.otf') format('OpenType');
+    /* Add additional src declarations for other font file formats if necessary */
+    /* E.g., src: url('/fonts/your-font-file.woff2') format('woff2'); */
+}
+
+@font-face {
+    font-family:'cute';
+    src: url('c:///users/britn/appdata/local/microsoft/windows/fonts/sniglet-extrabold.ttf') format('OpenType');
+}
+
+/* Set background image properties */
+body {
+    background-image: url('../images/background.png');
+    background-size: cover;
+    background-position: bottom center;
+    margin: 0; /* Remove default body margin */
+    padding: 0; /* Remove default body padding */
+    font-family: 'PP Pangaia', sans-serif;
+    
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    background-color: #f0f0f0; /* Set initial background color */
+    transition: background-color 0.5s ease; /* Add transition for smooth color change */
+}
+
+.overlay {
+    position: absolute; /* Set position to absolute */
+    top: 50%; /* Position from the top */
+    left: 50%; /* Position from the left */
+    transform: translate(-50%, -50%); /* Center the element */
+}
+
+.container {
+    width: 90%;
+    max-width: 800px; /* Set maximum width for the container */
+    padding: 20px; /* Add padding to the container */
+}
+
+
+.container {
+     /* Adjust the width of the container as needed */
+    margin: 20px auto; /* Center the container */
+    margin-left: 10%; 
+    padding: 20px; /* Add padding inside the container */
+    border: 4px double transparent; /* Set a solid border with initial transparent color */
+    border-radius: 10px; /* Add rounded corners to the border */
+    
+    transition: transform 0.3s ease; /* Add a transition for smooth animation */
+
+}
+
+#aboutContainer {
+    display: none; /* Initially hide the container */
+    position: absolute; /* Position the container absolutely */
+    top: 26%; /* Position it at the top of the page */
+    left: 50%; /* Position it to the right of the navbar */
+    transform: translateX(-100%); /* Move it back to the left to hide initially */
+    width: 500px; /* Adjust the width as needed */
+    height: 400px;
+    padding: 30px; /* Add padding as needed */
+    background-color: transparent; /* Set background color to transparent */
+    backdrop-filter: blur(3px); /* Apply blur effect to the backdrop */
+    background-clip: padding-box; /* Ensure background only covers padding area */
+    box-shadow: 0 1px 10px rgba(0, 0, 0, 0.5); /* Add shadow for depth */
+    z-index: 999; /* Set a high z-index value to ensure it appears in front */
+}
+
+.pop-out {
+    transform: scale(0.001); /* Increase the size of the container */
+}
+
+p {
+    
+    padding-top: 20px;
+    font-size: 1.4rem; /* Set the font size for paragraphs */
+    line-height: 1.6; /* Set the line height for paragraphs */
+    
+    backdrop-filter: none; /* Disable blur effect on the paragraph */
+    font-family:'PP Pangaia';
+    text-shadow: 1px 1px 2px rgba(143, 139, 139, 0.5); /* Add shadow to the text */
+}
+
+
+
+/* Add styles for links if needed */
+a {
+    color: #007bff; /* Set link color */
+    text-decoration: none; /* Remove default underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+
+/* contact form */
+
+/**table styling*/
+* {
+    box-sizing: border-box;
+}
+
+/* Define CSS variables for the gradient colors */
+:root {
+    --color-1: rgba(107, 91, 149, 0.7); /* Example color 1 */
+    --color-2: #4682b4; /* Example color 2 */
+}
+.Pop_Up_Button {
+    margin-bottom: 15px;
+    position: fixed;
+    bottom: 1.75vw;
+    right: 1.75vw; /* Adjusted right property */
+    width: 25vw;
+    background-color: white;
+    color: black;
+    border: none; /* Remove solid border */
+    cursor: pointer;
+    -webkit-animation: movePopup 5s forwards; /* Explicitly specify animation direction */
+    animation: movePopup 5s forwards; /* Explicitly specify animation direction */
+    border-radius: 10px; /* Updated border radius */
+    border-width: 2px; /* Define border width */
+    border-color: linear-gradient(to right, var(--color-1), var(--color-2)); /* Remove '1' */
+    box-shadow: 0 0 20px rgba(34, 2, 33, 0.959); /* Neon-like shadow */
+    filter: brightness(100%) blur(0%); /* Adjust brightness and blur for neon effect */
+}
+
+@keyframes movePopup {
+    from {right: -40vw;} /* Move from outside of the viewport on the right */
+    to {right: 1.75vw;} /* Move to the desired position from the right */
+}
+
+.form-popup {
+    z-index: 8;
+    display: none;
+    position: fixed;
+    bottom: .5vw;
+    right: .5vw;
+}
+
+.form-container {
+    max-width: 49vw;
+    padding: 1vw;
+    background-color: white;
+}
+
+button {
+    letter-spacing: .3vw;
+    font-size: 1.5vw;
+    font-weight: bold;
+    padding: 1.5vw;
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+    z-index:7;
+}
+
+button:hover, .form-container .btn:hover {
+    color: white;
+    background-color: #ff6f61;
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    border-color: silver;
+}
+
+.form-container .btn {
+    background-color: white;
+    color: black;
+    border-color: black;
+    margin-bottom: 1vh;
+}
+
+.form-container .cancel {
+    background-color: black;
+    color: white;
+    border-color: gray;
+}
+
+.form-container .cancel:hover {
+    color: white;
+    background-color:rgba(107, 91, 149, 0.7);
+    transition-duration: 1s;
+    -webkit-transition-duration: 1s;
+    border-color: black;
+}
+
+/* Style for form input fields */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container textarea {
+    width: 100%;
+    padding: 1vw;
+    margin-bottom: 1vw; /* Add spacing between input fields */
+    border: 1px solid #ccc; /* Add border to input fields */
+    border-radius: 5px;
+}
+
+/* Style for the message input field */
+.form-container textarea {
+    width: 100%;
+    padding: 1vw;
+    margin-bottom: 1vw; /* Add spacing between input fields */
+    border: 1px solid #ccc; /* Add border to input fields */
+    border-radius: 5px;
+    height: 150px; /* Set the height of the message input field */
+}
+/* end contact form */
+
+/* footer */ 
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 40%;
+    padding-top: 30%; /* Adjust the padding to decrease the space above the footer */
+    padding-bottom: -5%; /* Add padding at the bottom for space */
+    color: #333; /* Optional: Text color for the footer */
+    font-family:'cute', sans-serif;
+
+}
+/* end footer */
+
+/*NAVBAR*/
+
+.Navbar {
+   /* background-color: rgba(107, 91, 149, 0.7); Set background color with opacity */
+    padding: 20px; /* Add padding */
+    width: 5%; /* Set the navbar width to 100% */
+    position: fixed; /* Fix the navbar position */
+    top: 0; /* Position the navbar at the top of the viewport */
+    left: 0; /* Position the navbar at the left side of the viewport */
+    z-index: 999; /* Set a high z-index value to ensure it appears above other elements */
+  
+}
+
+.Navbar .nav {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.Navbar .nav a {
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(107, 91, 149, 0.01); /* Set background color with opacity */
+    padding: 5px 10px; /* Adjust padding to make buttons shorter */
+    margin: 5px;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.Navbar .nav a:hover {
+    background-color: #ff6f61;
+}
+.image-container {
+    display: flex;
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    position: fixed; /* Position the container fixed */
+    top: 0; /* Align to the top of the viewport */
+    right: 0; /* Align to the right side of the viewport */
+    width: auto; /* Adjust the width of the container */
+    height: auto; /* Let the height adjust automatically */
+    margin-left: 5vh; /* Use viewport units for margin */
+}
+
+.fname {
+    font-size: 15vh; /* Set the font size using viewport units */
+    color: white; /* Set the font color to white */
+    font-family: 'PP Pangaia', sans-serif;
+    margin-right: 3vh; /* Use viewport units for margin */
+    margin-top: 50vh; /* Use viewport units for margin */
+    text-align: center; /* Center the text horizontally */
+    transform: translateX(-50%); /* Center the text horizontally */
+    position: absolute; /* Position the name absolutely */
+    right: 100%; /* Center the name horizontally */
+    top: 50%; /* Move the name down to the middle */
+    margin-top: 30vh; /* Adjust the top margin to center vertically */
+    opacity: 0; /* Initially hide the element */
+    transition: opacity 12s ease; /* Add transition for smooth fade-in effect */
+   
+}
+
+.image-container2 {
+    display: flex;
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: flex-end; /* Align items to the left */
+    position: fixed; /* Position the container fixed */
+    top: 30%; /* Adjust the top position to move it below the first container */
+    right: 0; /* Align to the right side of the viewport */
+    width: 30vw; /* Adjust the width of the container */
+    height: auto; /* Let the height adjust automatically */
+    padding-left: 10%;
+}
+
+
+
+/* Ensure new content starts immediately after the background image */
+#content {
+    position: fixed;
+    top: 100%; /* Adjust as needed */
+    left: 0;
+    width: 80%;
+    background-color: #1c1a1a; /* Set background color for the new content */
+}
+
+/*NEW CONTENT SCROLL IMAGES*/
+#content {
+    position: absolute;
+    top: 100vh; /* Adjust as needed */
+    left: 0;
+    width: 100%; /* Change width to 100% to adapt to smaller screens */
+    max-height: 100vh ; /* Adjust max-height to fit smaller screens while leaving space for header/footer */
+    overflow: fixed; /* Add overflow to enable scrolling if the content overflows */
+    background-color: #000000; /* Set background color for the new content */
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+}
+
+.content img {
+    max-width: 100%; /* Ensure images do not exceed the width of their container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+#content::-webkit-scrollbar {
+    display: none; /* For Chrome, Safari, and Opera */
+}
+
+.h1 {
+    position: absolute;
+    top: 30%;
+    left: 73%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-family: 'PP Pangaia', sans-serif;
+    font-size: 13vw; /* Set font size relative to viewport width */
+}
+
+.backgroundp {
+    position: absolute;
+    top:70%;
+    left:74%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    font-family: 'PP Pangaia', sans-serif;
+    font-size: 1.5vw; 
+}
+
+#scrollButton {
+    position: fixed;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white; 
+    cursor: pointer;
+}
+
+/* For smaller screens */
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url('../images/background.png'); /* Background image for smaller screens */
+        background-size: cover; /* This will cover the entire viewport */
+        background-position: center left 10%;
+        background-repeat: no-repeat;
+        /*height: calc(70vh - 20px); /* Set the height of the body to 100% of the viewport height minus 20px */
+        height:auto;
+        font-family: 'Montserrat', sans-serif;
+        overflow: hidden; /* Remove scrolling and overflow */
+    }
+} 
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .fname {
+        margin-bottom: 2vh; /* Use viewport units for margin */
+        position: absolute; /* Set position to absolute for precise control */
+        top: 10vh; /* Use viewport units for margin */
+        left: 50%; /* Center the name element horizontally */
+        transform: translateX(-50%); /* Center the name element horizontally */
+    } 
+
+    .image-container {
+        top: 10vh; /* Use viewport units for margin */
+        width: calc(100% - 10vh); /* Make the container narrower for smaller screens */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .devTag {
+        /* Your styles for smaller screens */
+        margin-bottom: 10px; /* Reduce margin between elements for smaller screens */
+        position: fixed; /* Set position to absolute for precise control */
+        top: 20px; /* Adjust top position for the name element */
+        left: 50%; /* Center the name element horizontally */
+        transform: translateX(-50%); /* Center the name element horizontally */
+    }
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for Firefox */
+.hide-scrollbar {
+    scrollbar-width: none;
+}
