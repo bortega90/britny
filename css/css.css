@@ -441,6 +441,79 @@ footer {
     }
 }
 
+
+/* Mobile styles */
+@media screen and (max-width: 480px) {
+    /* Your CSS rules for mobile devices */
+    body {
+        /* Mobile-specific styles */
+        background-image: url('../images/background.png'); /* Background image for smaller screens */
+        background-size: cover; /* This will cover the entire viewport */
+        background-position: center left 10%;
+        background-repeat: no-repeat;
+        height:auto; /* Adjust height for smaller screens */
+        font-family: 'Montserrat', sans-serif;
+        overflow: hidden; /* Remove scrolling and overflow */
+    }
+
+    .fname {
+        /* Mobile-specific styles */
+        margin-bottom: 2vh; /* Use viewport units for margin */
+        position: absolute; /* Set position to absolute for precise control */
+        top: 10vh; /* Use viewport units for margin */
+        left: 50%; /* Center the name element horizontally */
+        transform: translateX(-50%); /* Center the name element horizontally */
+    }
+
+    .image-container {
+        /* Mobile-specific styles */
+        top: 10vh; /* Use viewport units for margin */
+        width: calc(100% - 10vh); /* Make the container narrower for smaller screens */
+    }
+
+    /* Add more mobile-specific styles as needed */
+}
+
+/* Tablet styles */
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+    /* Your CSS rules for tablets */
+    body {
+        /* Tablet-specific styles */
+        background-image: url('../images/background.png'); /* Background image for smaller screens */
+        background-size: cover; /* This will cover the entire viewport */
+        background-position: center left 10%;
+        background-repeat: no-repeat;
+        height:auto; /* Adjust height for smaller screens */
+        font-family: 'Montserrat', sans-serif;
+        overflow: hidden; /* Remove scrolling and overflow */
+    }
+
+    .fname {
+        /* Tablet-specific styles */
+        margin-bottom: 2vh; /* Use viewport units for margin */
+        position: absolute; /* Set position to absolute for precise control */
+        top: 10vh; /* Use viewport units for margin */
+        left: 50%; /* Center the name element horizontally */
+        transform: translateX(-50%); /* Center the name element horizontally */
+    }
+
+    .image-container {
+        /* Tablet-specific styles */
+        top: 10vh; /* Use viewport units for margin */
+        width: calc(100% - 10vh); /* Make the container narrower for smaller screens */
+    }
+
+    /* Add more tablet-specific styles as needed */
+}
+
+/* Desktop styles *
+@
+
+    /* Add more desktop-specific styles as needed */
+
+
+
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 .hide-scrollbar::-webkit-scrollbar {
     display: none;
