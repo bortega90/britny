@@ -222,7 +222,7 @@ footer {
     padding-bottom: 3px; /* Add padding at the bottom for space */
     color: #333; /* Optional: Text color for the footer */
     font-family: 'cute', sans-serif;
-    font-size: 8px; /* Adjust the font size to make the footer text smaller */
+    font-size: .5vh !important; /* Adjust the font size to make the footer text smaller */
 }
 /* end footer */
 
@@ -338,7 +338,7 @@ footer {
     transform: translate(-50%, -50%);
     z-index: 2;
     font-family: 'PP Pangaia', sans-serif;
-    font-size: 13vw; /* Set font size relative to viewport width */
+    font-size: 8vw !important; /* Set font size relative to viewport width */
 }
 
 .backgroundp {
