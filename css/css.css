@@ -17,18 +17,13 @@ body {
     background-position: bottom center;
     margin: 0; /* Remove default body margin */
     padding: 0; /* Remove default body padding */
-    font-family: 'PP Pangaia', sans-serif;
+    font-family: 'Montserrat', sans-serif,'Segoe UI', Tahoma, Geneva, Verdana ;
     height: 100vh;
     overflow-x: hidden; /* Hide horizontal scrollbar */
+    color: rgba(237, 125, 12, 0.276) ; /* Make font more transparent */
 }
 
-@media not all and (min-resolution: 0.001dpcm) { 
-    @supports (-webkit-appearance:none) {
-        body {
-            font-family: 'Your-Safari-Font', sans-serif; /* Font for Safari */
-        }
-    }
-}
+
 
 .overlay {
     position: absolute; /* Set position to absolute */
@@ -51,7 +46,7 @@ body {
     padding: 20px; /* Add padding inside the container */
     border: 4px double transparent; /* Set a solid border with initial transparent color */
     border-radius: 10px; /* Add rounded corners to the border */
-    
+ 
     transition: transform 0.3s ease; /* Add a transition for smooth animation */
 
 }
@@ -83,7 +78,7 @@ p {
     line-height: 1.6; /* Set the line height for paragraphs */
     
     backdrop-filter: none; /* Disable blur effect on the paragraph */
-    font-family:'PP Pangaia', sans-serif;
+    font-family:'Montserrat', sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana;
     text-shadow: 1px 1px 2px rgba(143, 139, 139, 0.5); /* Add shadow to the text */
 }
 
@@ -222,7 +217,7 @@ footer {
     padding-top: 3px; /* Adjust the padding to decrease the space above the footer */
     padding-bottom: 3px; /* Add padding at the bottom for space */
     color: #333; /* Optional: Text color for the footer */
-    font-family: 'cute', sans-serif;
+    font-family: 'Montserrat', sans-serif;;
     font-size: .5vh !important; /* Adjust the font size to make the footer text smaller */
 }
 /* end footer */
@@ -273,10 +268,11 @@ footer {
 }
 
 .fname {
-    font-size: 15vh; /* Set the font size using viewport units */
-    color: white; /* Set the font color to white */
-    font-family: 'PP Pangaia', sans-serif;
-    margin-right: 3vh; /* Use viewport units for margin */
+    font-size: 23vh; /* Set the font size using viewport units */
+    color: rgba(251, 251, 251, 0.71); /* Set the font color to white */
+    font-family: 'Montserrat',sans-serif ,'Segoe UI', Tahoma, Geneva, Verdana;
+    font-stretch: extra-expanded;
+    margin-right: -28vh; /* Use viewport units for margin */
     margin-top: 50vh; /* Use viewport units for margin */
     text-align: center; /* Center the text horizontally */
     transform: translateX(-50%); /* Center the text horizontally */
@@ -338,7 +334,7 @@ footer {
     left: 73%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    font-family: 'PP Pangaia', sans-serif;
+    font-family: 'Montserrat',sans-serif  ,'Segoe UI', Tahoma, Geneva, Verdana;
     font-size: 8vw !important; /* Set font size relative to viewport width */
 }
 
@@ -348,7 +344,7 @@ footer {
     left:74%;
     transform: translate(-50%, -50%);
     z-index: 2;
-    font-family: 'PP Pangaia', sans-serif;
+    font-family: 'Montserrat',sans-serif,'Segoe UI', Tahoma, Geneva, Verdana;
     font-size: 1.5vw; 
 }
 
